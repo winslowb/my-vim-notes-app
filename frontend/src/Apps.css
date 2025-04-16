@@ -1,0 +1,35 @@
+.react-resizable-handle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  cursor: se-resize;
+  opacity: 1;
+  /**
+   * Giant bright triangle with a shadow.
+   * Using (border tricks) for the pointer.
+   */
+  border-right: 6px solid #fabd2f;  /* Gruvbox yellow */
+  border-bottom: 6px solid #fabd2f; /* Gruvbox yellow */
+  border-left: none;
+  border-top: none;
+  background: #282828 !important; /* Gruvbox dark bg, remove if theme is light */
+  box-shadow: 0px 0px 4px #000a;
+}
+/* Extra: brute-force overrule for visibility everywhere */
+.react-resizable-handle::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  pointer-events: none;
+  background: transparent;
+  /* For more drama, uncomment below:
+  background: #fabd2f33;
+  border-radius: 24px; */
+}

@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} 
+
+/* --- CUSTOM RESIZE HANDLE OVERRIDE --- */
+.react-resizable-handle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 0;
+  bottom: 0;
+  z-index: 20 !important;
+  cursor: se-resize;
+  /* Extremely visible: big yellow "L" for handle corner */
+  border-right: 6px solid #fabd2f !important;  /* Gruvbox yellow */
+  border-bottom: 6px solid #fabd2f !important; /* Gruvbox yellow */
+  background: #282828 !important; /* For dark Gruvbox - change for light if needed */
+  opacity: 1 !important;
+  box-sizing: border-box;
+}
+.react-resizable-handle::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  right: -8px;
+  bottom: -8px;
+  pointer-events: none;
+  background: transparent;
+  /* Uncomment for an extra visual hit:
+  background: #fabd2f33;
+  border-radius: 24px;*/
+}
+
+/* Default: Gruvbox dark */
+.react-resizable-handle {
+  border-right: 6px solid #fabd2f !important;
+  border-bottom: 6px solid #fabd2f !important;
+  background: #282828 !important;
+  width: 24px !important;
+  height: 24px !important;
+  opacity: 1 !important;
+  cursor: se-resize;
+  z-index: 20 !important;
+  box-sizing: border-box;
+}
+/* Light theme: Eclipse or similar */
+body.light .react-resizable-handle {
+  border-right: 6px solid #458588 !important;   /* Gruvbox blue */
+  border-bottom: 6px solid #458588 !important;  /* Gruvbox blue */
+  background: #fffbe8 !important;               /* or #f9f5d7, your light bg */
+}
+/* Optionally, remove the black square in the light theme: */
+body.light .react-resizable-handle {
+  box-shadow: 0 1px 5px #45858880 !important;  /* Optional: blue highlight shadow */
+}
