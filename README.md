@@ -83,11 +83,3 @@ User <-> React App (Markdown/Blocks UI, Vim mode, Calendar)
 4. Auth, multi-user support
 
 ---
-
-## 6. Next Steps
-
-- Pick frontend editor library with best Vim/MD/blocks support (start with CodiMirror+React)
-- Scaffold project structure (create-react-app, Next.js, etc.)
-- Wire up drag-and-drop blocks and markdown storage
-- Start minimal, evolve feature set incrementally (demo often!)
-
