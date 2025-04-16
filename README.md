@@ -82,4 +82,3 @@ User <-> React App (Markdown/Blocks UI, Vim mode, Calendar)
 3. Add observability/logging (Sentry, etc.)
 4. Auth, multi-user support
 
----
