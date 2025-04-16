@@ -1,7 +1,3 @@
-Awesome project idea! Your requirements hit the sweet spot between powerful note-taking, extensible integrations, and a rich UI/UX. Here’s a breakdown of the suggested stack, high-level architecture, and initial next steps, exposing DevOps/SRE practices as appropriate.
-
----
-
 ## 1. Technology Stack
 
 **Frontend:**
@@ -24,7 +20,7 @@ Awesome project idea! Your requirements hit the sweet spot between powerful note
 - Google Drive API (auth+embedding)
 - Authentication: NextAuth.js or Auth0
 
-**DevOps/SRE/Cloud:**
+Cloud:**
 - Containerization: Docker (multi-stage for front+back end)
 - CI/CD: GitHub Actions or GitLab CI
 - Deployment: Vercel, Netlify (if JAMStack), or Kubernetes cluster on GCP/AWS/Azure if scaling up
@@ -34,15 +30,15 @@ Awesome project idea! Your requirements hit the sweet spot between powerful note
 
 ## 2. Core Features Mapping
 
-| Feature | Tools/Tech | Notes |
-|---|---|---|
-| Markdown, Vim keybindings | monaco-editor/codemirror with Vim extension, Markdown renderer | CodiMirror has mature Vim mode; can be extended |
-| Movable "blocks" | React state management, dnd-kit | Arrange blocks in any order, persistent positions to DB |
-| Gruvbox Themes | Custom SCSS/themes | Can toggle via React Context |
-| Embeds (PDF/JPG/Drive) | pdf.js, Google Drive API, native img tags | Handle security/sandboxing for external embeds |
-| AI integration | OpenAI API | ChatGPT prompts, summarize, generate |
-| Calendar/task integration | FullCalendar/React Big Calendar, Postgres joins | Tasks model, highlight days with tasks |
-| Tables & Arithmetic | Markdown tables, mini-latex/MDX/MathJax, front-end eval | Simple spreadsheet-like features |
+| Feature                   | Tools/Tech                                                     | Notes                                                   |
+|---------------------------|----------------------------------------------------------------|---------------------------------------------------------|
+| Markdown, Vim keybindings | monaco-editor/codemirror with Vim extension, Markdown renderer | CodiMirror has mature Vim mode; can be extended         |
+| Movable "blocks"          | React state management, dnd-kit                                | Arrange blocks in any order, persistent positions to DB |
+| Gruvbox Themes            | Custom SCSS/themes                                             | Can toggle via React Context                            |
+| Embeds (PDF/JPG/Drive)    | pdf.js, Google Drive API, native img tags                      | Handle security/sandboxing for external embeds          |
+| AI integration            | OpenAI API                                                     | ChatGPT prompts, summarize, generate                    |
+| Calendar/task integration | FullCalendar/React Big Calendar, Postgres joins                | Tasks model, highlight days with tasks                  |
+| Tables & Arithmetic       | Markdown tables, mini-latex/MDX/MathJax, front-end eval        | Simple spreadsheet-like features                        |
 
 ---
 
@@ -88,16 +84,6 @@ User <-> React App (Markdown/Blocks UI, Vim mode, Calendar)
 
 ---
 
-## 5. Dev Best Practices
-
-- Use feature flags for rapid prototyping/rollout (e.g., LaunchDarkly)
-- Infrastructure as code (Terraform) for cloud resources, stateful DBs, object storage
-- Secure API endpoints, never expose API keys to client
-- Use proper rate limiting, input sanitization for AI/embeds
-- Monitor error rates, latency; set up alerting for critical failures
-
----
-
 ## 6. Next Steps
 
 - Pick frontend editor library with best Vim/MD/blocks support (start with CodiMirror+React)
@@ -105,6 +91,3 @@ User <-> React App (Markdown/Blocks UI, Vim mode, Calendar)
 - Wire up drag-and-drop blocks and markdown storage
 - Start minimal, evolve feature set incrementally (demo often!)
 
----
-
-Want a sample initial project structure or a quick prototype for the Markdown+Vim+blocks piece? Or, would you like to sketch out the data model for blocks/notes/tasks so we can plan API endpoints? Let me know your preferred starting point and I’ll get you going!
