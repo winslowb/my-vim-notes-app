@@ -4,6 +4,7 @@ import { MarkdownBlock } from './MarkdownBlock';
 import GridLayout, { Layout } from "react-grid-layout";
 import "react-resizable/css/styles.css";
 import "react-grid-layout/css/styles.css";
+import { EmbedPreview } from "./EmbedPreview";
 import "./App.css";
 
 type Block = {
@@ -107,12 +108,13 @@ function App() {
           {blocks.map((block) => (
             <div key={block.id} style={{
               background: theme === "dark" ? "#3c3836" : "#fbf1c7",
-              padding: 8,
+              padding: 0,
               borderRadius: 8,
               overflow: "hidden",
               boxShadow: "0 2px 8px #0003",
               display: 'flex',
-              flexDirection: 'column'
+              flexDirection: 'column',
+              height: "100%"
             }}>
               <div className="block_drag_handle"
                 style={{
@@ -131,6 +133,8 @@ function App() {
                 theme={theme}
                 minHeight={40}
               />
+              <EmbedPreview markdown={block.content} />
+
               <button
                 onClick={() => removeBlock(block.id)}
                 disabled={blocks.length === 1}
