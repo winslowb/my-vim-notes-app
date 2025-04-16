@@ -20,7 +20,7 @@
 - Google Drive API (auth+embedding)
 - Authentication: NextAuth.js or Auth0
 
-Cloud:**
+**Platform:**
 - Containerization: Docker (multi-stage for front+back end)
 - CI/CD: GitHub Actions or GitLab CI
 - Deployment: Vercel, Netlify (if JAMStack), or Kubernetes cluster on GCP/AWS/Azure if scaling up
