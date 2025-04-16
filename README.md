@@ -1,4 +1,4 @@
-## 1. Technology Stack
+Stack
 
 **Frontend:**
 - Framework: React (with Redux or Zustand for state management)
@@ -28,7 +28,7 @@
 
 ---
 
-## 2. Core Features Mapping
+Core Features Mapping
 
 | Feature                   | Tools/Tech                                                     | Notes                                                   |
 |---------------------------|----------------------------------------------------------------|---------------------------------------------------------|
@@ -42,7 +42,7 @@
 
 ---
 
-## 3. High-Level Architecture Diagram
+High-Level Architecture Diagram
 
 ```plaintext
 User <-> React App (Markdown/Blocks UI, Vim mode, Calendar)
@@ -58,9 +58,9 @@ User <-> React App (Markdown/Blocks UI, Vim mode, Calendar)
 
 ---
 
-## 4. Development Roadmap (Initial Iteration)
+Initial Iteration
 
-**Phase 1: MVP**
+MVP**
 1. Set up project repo (lerna/yarn workspace for mono-repo, or separate repos for FE/BE)
 2. Build the Markdown editor in React with Vim keybindings
 3. Implement block creation, drag, and move within the workspace (keep in React state first)
@@ -69,14 +69,14 @@ User <-> React App (Markdown/Blocks UI, Vim mode, Calendar)
 6. Basic calendar view; highlight notes with tasks [stubbed tasks]
 7. Basic PDF/image embed in blocks
 
-**Phase 2: Integrations & Extensibility**
+Integrations & Extensibility**
 1. Persist notes/blocks/positions in DB
 2. Google Drive integration for embedding documents
 3. Extended AI integration (select text, "Ask AI" actions)
 4. Tables/arithmetic block (evaluate expressions)
 5. Robust calendar/tasks (CRUD, reminders)
 
-**Phase 3: DevOps & Scale**
+Platform Ops
 1. Dockerize app, add CI/CD
 2. Set up secret management for API keys
 3. Add observability/logging (Sentry, etc.)
