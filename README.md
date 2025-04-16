@@ -1,12 +1,12 @@
-## 1. Technology Stack
+## Stack
 
 **Frontend:**
-- Framework: React (with Redux or Zustand for state management)
-- Editor: monaco-editor, react-codemirror, or [TipTap](https://tiptap.dev/) (for flexible blocks and Vim mode)
-- Drag-and-drop: react-beautiful-dnd or dnd-kit
-- Themes: Custom Gruvbox-based CSS/Sass
-- Calendar: [fullcalendar.io](https://fullcalendar.io) or [react-big-calendar](https://jquense.github.io/react-big-calendar/)
-- Embeds: Use iFrame or document viewers for PDFs, JPGs, and Google Drive embedding support
+- _Framework_: React (with Redux or Zustand for state management)
+- _Editor_: monaco-editor, react-codemirror, or [TipTap](https://tiptap.dev/) (for flexible blocks and Vim mode)
+- _Drag-and-drop_: react-beautiful-dnd or dnd-kit
+- _Themes_: Custom Gruvbox-based CSS/Sass
+- _Calendar_: [fullcalendar.io](https://fullcalendar.io) or [react-big-calendar](https://jquense.github.io/react-big-calendar/)
+- _Embeds_: Use iFrame or document viewers for PDFs, JPGs, and Google Drive embedding support
 
 **Backend:**
 - API: Node.js/Express or Next.js API routes
